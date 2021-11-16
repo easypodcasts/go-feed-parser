@@ -1,0 +1,15 @@
+before:
+  hooks:
+    - go mod tidy
+
+project_name: feed-parser
+
+builds:
+  - env: [ CGO_ENABLED=0 ]
+    ldflags: -s -w -X github.com/easypodcasts/go-feed-parser/build.Version={{.Version}}
+    binary: feed-parser
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
