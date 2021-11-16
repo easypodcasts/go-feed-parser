@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/easypodcasts/go-feed-parser/build"
 	"github.com/mmcdole/gofeed"
 )
 
@@ -15,7 +16,7 @@ func main() {
 	flag.Parse()
 
 	if *version {
-		fmt.Println(Version)
+		fmt.Println(build.Version)
 		os.Exit(0)
 	}
 
