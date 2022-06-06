@@ -8,7 +8,7 @@ let
 in
 buildGoPackage rec {
   name = "go-feed-parser-${version}";
-  version = "v.0.0.1";
+  version = "v.0.1.0";
   goPackagePath = "github.com/easypodcasts/go-feed-parser";
 
   src = lib.cleanSource ./.;
